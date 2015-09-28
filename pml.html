@@ -64,7 +64,7 @@ img {
 </div>
 
 
-<p>Bio-metric data from wearable activity trackers are commonly used to measure the quantity of physical activity performed over a period of time. The ability of these trackers to measure the quality of physical activity is less understood. Using wearable activity trackers, XX and colleagues collected bio-metric data from volunteer subjects performing weight lifting activities. The subjects form during these activities was classified as X, Y, and Z. In this assignment, we use these data to determine a bio-metric model for predicting quality of physical activity.</p>
+<p>Bio-metric data from wearable activity trackers are commonly used to measure the quantity of physical activity performed over a period of time. The ability of these trackers to measure the quality of physical activity is less understood. Using wearable activity trackers, Velloso and colleagues collected bio-metric data from volunteer subjects performing unilateral dumbbell bicep curls. The subjects form during these activities was classified into six categories (exact specification, throwing elbows to the front, lifting only halfway, lowering halfway, and throwing hips to the front.<span class="citation">(Velloso et al. 2013)</span> In this assignment, we use these data to determine a bio-metric model for predicting quality of physical activity.</p>
 <div id="loading-and-cleaning-the-data" class="section level2">
 <h2>Loading and cleaning the data</h2>
 <p>The caret and randomForest packages are used for predictive modelling. The doMC package is used to employ multiple CPU cores during computation in order to decrease computation time.</p>
@@ -130,33 +130,33 @@ confusionMatrix(prediction_testing, testing_partition$classe)</code></pre>
 ## 
 ##           Reference
 ## Prediction    A    B    C    D    E
-##          A 4414   68    4    8    0
-##          B   29 2930   37    4   11
-##          C   13   24 2652   57    7
-##          D    5   15   42 2503   23
-##          E    3    0    2    0 2844
+##          A 4411   69    3    7    0
+##          B   30 2928   38    4   11
+##          C   16   25 2656   62    9
+##          D    5   15   39 2499   20
+##          E    2    0    1    0 2845
 ## 
 ## Overall Statistics
 ##                                           
-##                Accuracy : 0.9776          
-##                  95% CI : (0.9751, 0.9798)
+##                Accuracy : 0.9773          
+##                  95% CI : (0.9749, 0.9796)
 ##     No Information Rate : 0.2844          
 ##     P-Value [Acc &gt; NIR] : &lt; 2.2e-16       
 ##                                           
-##                   Kappa : 0.9716          
-##  Mcnemar's Test P-Value : 1.573e-11       
+##                   Kappa : 0.9713          
+##  Mcnemar's Test P-Value : 1.09e-12        
 ## 
 ## Statistics by Class:
 ## 
 ##                      Class: A Class: B Class: C Class: D Class: E
-## Sensitivity            0.9888   0.9648   0.9689   0.9732   0.9858
-## Specificity            0.9929   0.9936   0.9922   0.9935   0.9996
-## Pos Pred Value         0.9822   0.9731   0.9633   0.9672   0.9982
-## Neg Pred Value         0.9955   0.9916   0.9934   0.9947   0.9968
+## Sensitivity            0.9881   0.9641   0.9704   0.9716   0.9861
+## Specificity            0.9930   0.9934   0.9914   0.9940   0.9998
+## Pos Pred Value         0.9824   0.9724   0.9595   0.9694   0.9989
+## Neg Pred Value         0.9953   0.9914   0.9937   0.9944   0.9969
 ## Prevalence             0.2844   0.1935   0.1744   0.1639   0.1838
-## Detection Rate         0.2812   0.1867   0.1690   0.1595   0.1812
-## Detection Prevalence   0.2863   0.1918   0.1754   0.1649   0.1815
-## Balanced Accuracy      0.9908   0.9792   0.9806   0.9833   0.9927</code></pre>
+## Detection Rate         0.2810   0.1866   0.1692   0.1592   0.1813
+## Detection Prevalence   0.2861   0.1918   0.1764   0.1643   0.1815
+## Balanced Accuracy      0.9905   0.9788   0.9809   0.9828   0.9930</code></pre>
 <p>The most important variables were roll at belt, yaw at belt, and z-direction of the dumbell.</p>
 <pre class="r"><code>## List most important variables in model
 varImp(model_rf)</code></pre>
@@ -185,6 +185,9 @@ varImp(model_rf)</code></pre>
 ## gyros_belt_z          10.230
 ## magnet_forearm_y       8.714
 ## magnet_arm_y           8.566</code></pre>
+<div class="references">
+<p>Velloso, E., A. Bulling, H. Gellersen, W. Ugullino, and H. Fuks. 2013. “Qualitative Activity Recognition of Weight Lifting Exercises.” <a href="http://groupware.les.inf.puc-rio.br/work.jsf?p1=11201">http://groupware.les.inf.puc-rio.br/work.jsf?p1=11201</a>.</p>
+</div>
 </div>
 
 

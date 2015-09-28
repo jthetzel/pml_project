@@ -4,9 +4,26 @@ output:
   html_document:
     toc: false
     theme: united
+references:
+  - id: velloso1
+    title: Qualitative Activity Recognition of Weight Lifting Exercises
+    author:
+    - family: Velloso
+      given:  E.
+    - family: Bulling
+      given: A.
+    - family: Gellersen
+      given: H.
+    - family: Ugullino
+      given: W.
+    - family: Fuks
+      given: H.
+    URL: 'http://groupware.les.inf.puc-rio.br/work.jsf?p1=11201'
+    issued:
+      year: 2013
 ---
 
-Bio-metric data from wearable activity trackers are commonly used to measure the quantity of physical activity performed over a period of time. The ability of these trackers to measure the quality of physical activity is less understood. Using wearable activity trackers, XX and colleagues collected bio-metric data from volunteer subjects performing weight lifting activities. The subjects form during these activities was classified as X, Y, and Z. In this assignment, we use these data to determine a bio-metric model for predicting quality of physical activity.
+Bio-metric data from wearable activity trackers are commonly used to measure the quantity of physical activity performed over a period of time. The ability of these trackers to measure the quality of physical activity is less understood. Using wearable activity trackers, Velloso and colleagues collected bio-metric data from volunteer subjects performing unilateral dumbbell bicep curls. The subjects form during these activities was classified into six categories (exact specification, throwing elbows to the front, lifting only halfway, lowering halfway, and throwing hips to the front.[@velloso1] In this assignment, we use these data to determine a bio-metric model for predicting quality of physical activity.
 
 
 Loading and cleaning the data
